@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Count it all quick - light version",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "eslint": "eslint --ext .jsx --ext .js src/",
     "test": "npm run eslint",
