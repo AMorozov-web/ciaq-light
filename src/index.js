@@ -65,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     background-color: ${Color.BASIC_BACKGROUND};
+    color: ${Color.BASIC_WHITE};
   }
 `;
 
