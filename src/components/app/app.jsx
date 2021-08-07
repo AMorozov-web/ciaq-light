@@ -1,9 +1,12 @@
 import React from 'react';
+import {Header} from '../header/header';
 
 const App = () => {
 
   return (
-    <h1>CIAQ-Light</h1>
+    <Header>
+      CIAQ-Light
+    </Header>
   );
 };
 
