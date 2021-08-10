@@ -14,13 +14,13 @@ const UserAvatar = styled.img`
   height: 113px;
 `;
 
-const User = () => {
+const User = () : React.ReactElement => {
 
   return (
     <UserContainer>
-      <UserAvatar src="img/no-avatar.svg" aria-label="No avatar image"/>
+      <UserAvatar aria-label={`No avatar image`} src={`img/no-avatar.svg`} />
     </UserContainer>
   );
 };
 
-export {User};
+export { User };

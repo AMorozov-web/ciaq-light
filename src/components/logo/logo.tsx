@@ -13,13 +13,13 @@ const LogoImage = styled.img`
   height: 113px;
 `;
 
-const Logo = () => {
+const Logo = () : React.ReactElement => {
 
   return (
     <LogoContainer>
-      <LogoImage src="img/logo.svg" aria-label="Logotype of CIAQ project" />
+      <LogoImage aria-label={`Logotype of CIAQ project`} src={`img/logo.svg`} />
     </LogoContainer>
   );
 };
 
-export {Logo};
+export { Logo };

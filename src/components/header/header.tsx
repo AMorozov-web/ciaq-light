@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -10,7 +9,11 @@ const HeaderContainer = styled.div`
   padding-top: 50px;
 `;
 
-const Header = ({children}) => {
+interface IHeaderProps {
+  children ?: JSX.Element | JSX.Element[];
+}
+
+const Header = ({ children } : IHeaderProps) : React.ReactElement => {
 
   return (
     <header>
@@ -21,8 +24,4 @@ const Header = ({children}) => {
   );
 };
 
-Header.propTypes = {
-  children: PropTypes.node.isRequired,
-};
-
-export {Header};
+export { Header };

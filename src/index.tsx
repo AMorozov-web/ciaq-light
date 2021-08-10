@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {createGlobalStyle} from 'styled-components';
-import {normalize} from 'styled-normalize';
-import {App} from './components/app/app';
-import {Color} from './const';
+import { createGlobalStyle } from 'styled-components';
+import { normalize } from 'styled-normalize';
+import { App } from './components/app/app';
+import { Color } from './const';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -70,9 +70,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-    <>
-      <GlobalStyle />
-      <App />
-    </>,
-    document.querySelector(`#app`)
+  <>
+    <GlobalStyle />
+    <App />
+  </>,
+  document.querySelector(`#app`),
 );
