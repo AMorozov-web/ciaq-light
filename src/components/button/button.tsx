@@ -2,12 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import { Color } from '../../const';
 
-const StyledButton = styled.button`
+const StyledButton = styled.button<IButtonProps>`
   display: block;
-  width: ${({ width } : IButtonProps) : number => width}px;
-  height: ${({ height } : IButtonProps) : number => height}px;
+  width: ${({ width }) : number => width}px;
+  height: ${({ height }) : number => height}px;
   padding: 0;
-  border: ${({ withBorder } : IButtonProps) : string => {
+  border: ${({ withBorder }) : string => {
     return withBorder === true
       ? `1px solid ${Color.BASIC_WHITE}`
       : `none`;
