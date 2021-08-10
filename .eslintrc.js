@@ -78,6 +78,8 @@ module.exports = {
       'when': 'always'
     }],
     'react/jsx-newline': [2, { 'prevent': true }],
+    'react/jsx-one-expression-per-line': [2, {allow: 'single-child'}],
+    'react/no-multi-comp': ['off'],
     'react/prop-types': ['off'],
     'react/require-default-props': ['off'],
     'sort-imports': ['off'],
