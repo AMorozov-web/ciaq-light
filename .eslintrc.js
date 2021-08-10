@@ -45,6 +45,7 @@ module.exports = {
     'arrow-body-style': ['off'],
     'comma-dangle': ['off'],
     'indent': ['off'],
+    'linebreak-style': ['warn', 'windows'],
     'max-len': ['off'],
     'max-lines': [
       'error', {
@@ -54,7 +55,8 @@ module.exports = {
       }
     ],
     'no-ternary': ['off'],
-    'object-curly-newline': ['error', {
+    'object-curly-newline': [
+      'error', {
       'ObjectExpression': 'always',
       'ObjectPattern': { 'multiline': true },
       'ImportDeclaration': { 'multiline': true, 'minProperties': 2 },
@@ -62,6 +64,13 @@ module.exports = {
     }],
     'one-var': ['off'],
     'padded-blocks': ['off'],
+    'padding-line-between-statements': [
+      'error', {
+        'blankLine': 'always',
+        'prev': '*',
+        'next': 'return'
+      },
+    ],
     'react/function-component-definition': [ 2, {
       'namedComponents': 'arrow-function',
       'unnamedComponents': 'arrow-function'

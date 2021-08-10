@@ -32,7 +32,6 @@ const ListItem = ({ children } : IListProps) : React.ReactElement => {
 };
 
 const ButtonList = ({ children } : IListProps) : React.ReactElement => {
-
   return (
     <List>
       {React.Children.map(
