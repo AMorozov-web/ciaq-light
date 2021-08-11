@@ -24,6 +24,7 @@ module.exports = {
   plugins: [
     '@typescript-eslint',
     'import',
+    'import-newlines',
     'prettier',
     'react',
     'react-hooks'
@@ -35,16 +36,22 @@ module.exports = {
     '@typescript-eslint/indent': ['error', 2],
     '@typescript-eslint/member-ordering': ['off'],
     '@typescript-eslint/naming-convention': ['off'],
+    '@typescript-eslint/no-type-alias': ['off'],
     '@typescript-eslint/no-use-before-define': ['error'],
     '@typescript-eslint/object-curly-spacing': ['error', 'always'],
     '@typescript-eslint/prefer-readonly-parameter-types': ['off'],
     '@typescript-eslint/quotes': ['error', 'backtick'],
     '@typescript-eslint/type-annotation-spacing': ['error', {
-      before: true,
+      before: false,
       after: true,
     }],
     'arrow-body-style': ['off'],
     'comma-dangle': ['off'],
+    'import-newlines/enforce': [
+      'error',
+      1,
+      90
+    ],
     'indent': ['off'],
     'linebreak-style': ['warn', 'windows'],
     'max-len': ['off'],
@@ -55,6 +62,8 @@ module.exports = {
         skipComments: true,
       }
     ],
+    'no-negated-condition': ['off'],
+    'no-undefined': ['off'],
     'no-ternary': ['off'],
     'object-curly-newline': [
       'error', {
@@ -96,9 +105,12 @@ module.exports = {
     'react/jsx-newline': [2, {
       prevent: true
     }],
+    'react/jsx-no-bind': ['off'],
     'react/jsx-one-expression-per-line': [2, {
       allow: 'single-child'
     }],
+    'react/jsx-props-no-spreading': ['off'],
+    'react/jsx-sort-props': ['off'],
     'react/no-multi-comp': ['off'],
     'react/prop-types': ['off'],
     'react/require-default-props': ['off'],
