@@ -6,23 +6,29 @@ const List = styled.ul`
   justify-content: flex-start;
   align-items: center;
   width: min-content;
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
+  padding-left: 50px;
+  padding-right: 50px;
   list-style: none;
 `;
 
 const Item = styled.li`
   display: flex;
   width: min-content;
-  height: min-content;
+  height: auto;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 `;
 
 interface IListProps {
-  children ?: React.ReactNode;
+  children?: React.ReactNode;
 }
 
-const ListItem : React.FC<IListProps> = ({ children }) => {
+const ListItem: React.FC<IListProps> = ({ children }) => {
 
   return (
     <Item>
@@ -31,7 +37,7 @@ const ListItem : React.FC<IListProps> = ({ children }) => {
   );
 };
 
-const ButtonList : React.FC<IListProps> = ({ children }) => {
+const ButtonList: React.FC<IListProps> = ({ children }) => {
   return (
     <List>
       {React.Children.map(
