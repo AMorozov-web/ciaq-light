@@ -48,7 +48,22 @@ const Gradient = {
   ],
 };
 
+// Shadows
+
+const Shadows = {
+  LIGHT_BUTTON_SHADOW: `box-shadow: 0px 3px 36px rgba(255, 255, 255, 0.27);`,
+};
+
+// Font-family
+
+const FontFamily = {
+  ARCHIVO: `Archivo, Tahoma, sans-serif`,
+  ARCHIVO_BLACK: `ArchivoBlack, Verdana, sans-serif`,
+};
+
 export {
   Color,
   Gradient,
+  Shadows,
+  FontFamily,
 };
