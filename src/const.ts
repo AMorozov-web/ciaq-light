@@ -14,15 +14,38 @@ const Color = {
   WARNING: `#FCF42C`,
 };
 
-// Gradients
+// Gradient colors use with 0deg
 
 const Gradient = {
-  BASIC_GRADIENT: `linear-gradient(180deg, #224693 0%, #182D5A 50.52%, #0E2148 100%)`,
-  CTA_BUTTON_GRADIENT: `linear-gradient(0deg, #DA4B0E 0%, #EB7225 50.52%, #FF9944 100%)`,
-  GHOST_BUTTON_GRADIENT: `linear-gradient(180deg, #D6E0FF 0%, #93ABF0 100%)`,
-  PRINT_BUTTON_GRADIENT: `linear-gradient(180deg, #3BC9B8 0%, #1B9E8F 52.6%, #0D8375 100%)`,
-  REMOVE_BUTTON_GRADIENT: `linear-gradient(180deg, #FF4242 6.77%, #D90000 55.21%, #7B0000 100%)`,
-  SECONDARY_BUTTON_GRADIENT: `linear-gradient(180deg, #5E89FA 0%, #3F6AD8 51.04%, #2648A0 100%)`,
+  BASIC_GRADIENT: [
+    `#0E2148`,
+    `#182D5A`,
+    `#224693`,
+  ],
+  CTA_BUTTON_GRADIENT: [
+    `#DA4B0E`,
+    `#EB7225`,
+    `#FF9944`,
+  ],
+  GHOST_BUTTON_GRADIENT: [
+    `#93ABF0`,
+    `#D6E0FF`,
+  ],
+  PRINT_BUTTON_GRADIENT: [
+    `#0D8375`,
+    `#1B9E8F`,
+    `#3BC9B8`,
+  ],
+  REMOVE_BUTTON_GRADIENT: [
+    `#7B0000`,
+    `#D90000`,
+    `#FF4242`,
+  ],
+  SECONDARY_BUTTON_GRADIENT: [
+    `#2648A0`,
+    `#3F6AD8`,
+    `#5E89FA`,
+  ],
 };
 
 export {
