@@ -13,7 +13,7 @@ const LogoImage = styled.img`
   height: 113px;
 `;
 
-const Logo = () : React.ReactElement => {
+const Logo : React.FC = () => {
 
   return (
     <LogoContainer>

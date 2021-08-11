@@ -19,10 +19,10 @@ const Item = styled.li`
 `;
 
 interface IListProps {
-  children : JSX.Element | JSX.Element[];
+  children ?: React.ReactNode;
 }
 
-const ListItem = ({ children } : IListProps) : React.ReactElement => {
+const ListItem : React.FC<IListProps> = ({ children }) => {
 
   return (
     <Item>
@@ -31,7 +31,7 @@ const ListItem = ({ children } : IListProps) : React.ReactElement => {
   );
 };
 
-const ButtonList = ({ children } : IListProps) : React.ReactElement => {
+const ButtonList : React.FC<IListProps> = ({ children }) => {
   return (
     <List>
       {React.Children.map(

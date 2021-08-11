@@ -14,7 +14,7 @@ const UserAvatar = styled.img`
   height: 113px;
 `;
 
-const User = () : React.ReactElement => {
+const User : React.FC = () => {
 
   return (
     <UserContainer>

@@ -22,7 +22,7 @@ interface IButtonProps {
   gradient ?: string;
 }
 
-const Button = ({ width, height, withBorder, color, gradient } : IButtonProps) : React.ReactElement => {
+const Button : React.FC<IButtonProps> = ({ width, height, withBorder, color, gradient }) => {
 
   return (
     <StyledButton

@@ -3,7 +3,7 @@ import { Header } from '../header/header';
 import { Logo } from '../logo/logo';
 import { User } from '../user/user';
 
-const App = () : React.ReactElement => {
+const App : React.FC = () => {
 
   return (
     <Header>

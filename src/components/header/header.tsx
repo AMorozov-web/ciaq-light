@@ -10,10 +10,10 @@ const HeaderContainer = styled.div`
 `;
 
 interface IHeaderProps {
-  children ?: JSX.Element | JSX.Element[];
+  children ?: React.ReactNode;
 }
 
-const Header = ({ children } : IHeaderProps) : React.ReactElement => {
+const Header : React.FC<IHeaderProps> = ({ children }) => {
 
   return (
     <header>
