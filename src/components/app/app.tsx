@@ -3,7 +3,8 @@ import { Header } from '../header/header';
 import { Logo } from '../logo/logo';
 import { User } from '../user/user';
 import { ButtonList } from '../button-list/button-list';
-import { Button } from '../button/button';
+import { TextButton } from '../text-button/text-button';
+import { IconButton } from '../icon-button/icon-button';
 import {
   Color,
   Gradient,
@@ -15,23 +16,21 @@ const App: React.FC = () => {
     <Header>
       <Logo />
       <ButtonList>
-        <Button
+        <TextButton
           width={130}
           height={41}
           gradient={Gradient.CTA_BUTTON_GRADIENT}
-          contentType={`text`}
           text={`Upload file`}
           fontSize={13}
           fontColor={Color.BASIC_WHITE}
         />
-        <Button
+        <IconButton
           width={130}
           height={41}
           gradient={Gradient.GHOST_BUTTON_GRADIENT}
-          contentType={`text`}
-          text={`Load demo`}
-          fontSize={13}
-          fontColor={Color.GHOST_BUTTON_TEXT}
+          iconHeight={20}
+          iconWidth={20}
+          iconSrc={`img/remove-button-icon.svg`}
         />
       </ButtonList>
       <User />
