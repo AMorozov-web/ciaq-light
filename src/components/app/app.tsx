@@ -3,43 +3,38 @@ import { Header } from '../header/header';
 import { Logo } from '../logo/logo';
 import { User } from '../user/user';
 import { ButtonList } from '../button-list/button-list';
-import { Button } from '../button/button';
+import { TextButton } from '../text-button/text-button';
+import { IconButton } from '../icon-button/icon-button';
 import {
   Color,
   Gradient,
 } from '../../const';
-import { Main } from '../main/main';
 
 const App: React.FC = () => {
 
   return (
-    <>
-      <Header>
-        <Logo />
-        <ButtonList>
-          <Button
-            width={130}
-            height={41}
-            gradient={Gradient.CTA_BUTTON_GRADIENT}
-            contentType={`text`}
-            text={`Upload file`}
-            fontSize={13}
-            fontColor={Color.BASIC_WHITE}
-          />
-          <Button
-            width={130}
-            height={41}
-            gradient={Gradient.GHOST_BUTTON_GRADIENT}
-            contentType={`text`}
-            text={`Load demo`}
-            fontSize={13}
-            fontColor={Color.GHOST_BUTTON_TEXT}
-          />
-        </ButtonList>
-        <User />
-      </Header>
-      <Main />
-    </>
+    <Header>
+      <Logo />
+      <ButtonList>
+        <TextButton
+          width={130}
+          height={41}
+          gradient={Gradient.CTA_BUTTON_GRADIENT}
+          text={`Upload file`}
+          fontSize={13}
+          fontColor={Color.BASIC_WHITE}
+        />
+        <IconButton
+          width={130}
+          height={41}
+          gradient={Gradient.GHOST_BUTTON_GRADIENT}
+          iconHeight={20}
+          iconWidth={20}
+          iconSrc={`img/remove-button-icon.svg`}
+        />
+      </ButtonList>
+      <User />
+    </Header>
   );
 };
 
