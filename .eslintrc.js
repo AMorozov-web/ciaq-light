@@ -45,6 +45,7 @@ module.exports = {
       before: false,
       after: true,
     }],
+    '@typescript-eslint/sort-type-union-intersection-members': ['off'],
     'arrow-body-style': ['off'],
     'comma-dangle': ['off'],
     'import-newlines/enforce': [
@@ -76,7 +77,7 @@ module.exports = {
         multiline: true,
         minProperties: 2 },
       ExportDeclaration: {
-        multiline: true,
+        // multiline: true,
         minProperties: 2 }
     }],
     'one-var': ['off'],
