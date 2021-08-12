@@ -62,6 +62,7 @@ module.exports = {
         skipComments: true,
       }
     ],
+    'newline-per-chained-call': ['off'],
     'no-negated-condition': ['off'],
     'no-undefined': ['off'],
     'no-ternary': ['off'],
