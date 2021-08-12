@@ -38,7 +38,7 @@ const StyledButton = styled.button<ButtonProps>`
   &:focus {
     ${({ gradient }): string => {
     return gradient !== undefined
-      ? `background: linear-gradient(0deg, ${gradient.reverse().join(`, `)})`
+      ? `background: linear-gradient(0deg, ${gradient.slice().reverse().join(`, `)})`
       : ``;
   }};
     ${({ color }): string => {
@@ -53,23 +53,33 @@ const StyledButton = styled.button<ButtonProps>`
   }
 `;
 
-const ButtonTextContent = styled.span<ButtonContentProps>`
+const ButtonText = styled.span<ButtonContentProps>`
   display: block;
   font-family: ${FontFamily.ARCHIVO_BLACK};
-  color: ${({ fontColor }): string | undefined => fontColor};
-  text-align: center;
-`;
-
-const ButtonImageContent = styled.img<ButtonContentProps>`
-  display: flex;
-  ${({ imageWidth }): string => {
-    return imageWidth !== undefined
-      ? `width: ${imageWidth}px`
+  ${({ fontSize }): string => {
+    return fontSize !== undefined
+      ? `font-size: ${fontSize}px`
       : ``;
   }};
-  ${({ imageHeight }): string => {
-    return imageHeight !== undefined
-      ? `width: ${imageHeight}px`
+  ${({ fontColor }): string => {
+    return fontColor !== undefined
+      ? `color: ${fontColor}`
+      : ``;
+  }};
+  text-align: center;
+  text-transform: capitalize;
+`;
+
+const ButtonIcon = styled.img<ButtonContentProps>`
+  display: flex;
+  ${({ iconWidth }): string => {
+    return iconWidth !== undefined
+      ? `width: ${iconWidth}px`
+      : ``;
+  }};
+  ${({ iconHeight }): string => {
+    return iconHeight !== undefined
+      ? `width: ${iconHeight}px`
       : ``;
   }};
 `;
@@ -81,20 +91,22 @@ export enum ButtonContentType {
 
 type ButtonContentProps = (
   | {
-    imageWidth: number;
-    imageHeight: number;
-    imageSrc: string;
+    contentType: `icon`;
+    iconWidth: number;
+    iconHeight: number;
+    iconSrc: string;
     text?: never;
     fontSize?: never;
     fontColor?: never;
   }
   | {
+    contentType: `text`;
     text: string;
     fontSize: number;
     fontColor?: string;
-    imageWidth?: never;
-    imageHeight?: never;
-    imageSrc?: never;
+    iconWidth?: never;
+    iconHeight?: never;
+    iconSrc?: never;
   }
 );
 
@@ -108,10 +120,11 @@ type ButtonProps = ButtonColorProps & ButtonContentProps & {
   height: number;
   withBorder?: boolean;
   onClick?: ()=> void;
-  contentType?: keyof typeof ButtonContentType;
 };
 
-const Button: React.FC<ButtonProps> = ({ onClick, contentType, ...props }) => {
+// Prop onCLick must be required ^^
+
+const Button: React.FC<ButtonProps> = ({ onClick, ...props }) => {
 
   return (
     <StyledButton
@@ -119,9 +132,9 @@ const Button: React.FC<ButtonProps> = ({ onClick, contentType, ...props }) => {
       type={`button`}
       {...props}
     >
-      {contentType === ButtonContentType.text
-        ? <ButtonTextContent {...props}>{props.text}</ButtonTextContent>
-        : <ButtonImageContent {...props} />}
+      {props.contentType === ButtonContentType.text
+        ? <ButtonText {...props}>{props.text}</ButtonText>
+        : <ButtonIcon src={props.iconSrc} {...props} />}
     </StyledButton>
   );
 };

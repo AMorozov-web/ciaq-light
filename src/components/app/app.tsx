@@ -18,34 +18,21 @@ const App: React.FC = () => {
         <Button
           width={130}
           height={41}
-          gradient={Gradient.REMOVE_BUTTON_GRADIENT}
-          onClick={(): void => {
-            console.log(`click`);
-          }}
-          withBorder
+          gradient={Gradient.CTA_BUTTON_GRADIENT}
           contentType={`text`}
-          text={`Download`}
+          text={`Upload file`}
           fontSize={13}
           fontColor={Color.BASIC_WHITE}
         />
-        {/* <Button*/}
-        {/*  Width={130}*/}
-        {/*  Height={41}*/}
-        {/*  Gradient={Gradient.SECONDARY_BUTTON_GRADIENT}*/}
-        {/*  OnClick={(): void => {*/}
-        {/*    Console.log(`click`);*/}
-        {/*  }}*/}
-        {/*  WithBorder*/}
-        {/* />*/}
-        {/* <Button*/}
-        {/*  Width={130}*/}
-        {/*  Height={41}*/}
-        {/*  Color={Color.ACCENTUATE}*/}
-        {/*  OnClick={(): void => {*/}
-        {/*    Console.log(`click`);*/}
-        {/*  }}*/}
-        {/*  WithBorder*/}
-        {/* />*/}
+        <Button
+          width={130}
+          height={41}
+          gradient={Gradient.GHOST_BUTTON_GRADIENT}
+          contentType={`text`}
+          text={`Load demo`}
+          fontSize={13}
+          fontColor={Color.GHOST_BUTTON_TEXT}
+        />
       </ButtonList>
       <User />
     </Header>
