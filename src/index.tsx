@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'styled-normalize';
 import { App } from './components/app/app';
+import { Color } from './const';
 
 const GlobalStyle = createGlobalStyle`
   ${normalize}
@@ -63,7 +64,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: #f3f3f3;
+    background-color: ${Color.BASIC_BACKGROUND};
+    color: ${Color.BASIC_WHITE};
   }
 `;
 
