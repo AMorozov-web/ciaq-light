@@ -8,34 +8,38 @@ import {
   Color,
   Gradient,
 } from '../../const';
+import { Main } from '../main/main';
 
 const App: React.FC = () => {
 
   return (
-    <Header>
-      <Logo />
-      <ButtonList>
-        <Button
-          width={130}
-          height={41}
-          gradient={Gradient.CTA_BUTTON_GRADIENT}
-          contentType={`text`}
-          text={`Upload file`}
-          fontSize={13}
-          fontColor={Color.BASIC_WHITE}
-        />
-        <Button
-          width={130}
-          height={41}
-          gradient={Gradient.GHOST_BUTTON_GRADIENT}
-          contentType={`text`}
-          text={`Load demo`}
-          fontSize={13}
-          fontColor={Color.GHOST_BUTTON_TEXT}
-        />
-      </ButtonList>
-      <User />
-    </Header>
+    <>
+      <Header>
+        <Logo />
+        <ButtonList>
+          <Button
+            width={130}
+            height={41}
+            gradient={Gradient.CTA_BUTTON_GRADIENT}
+            contentType={`text`}
+            text={`Upload file`}
+            fontSize={13}
+            fontColor={Color.BASIC_WHITE}
+          />
+          <Button
+            width={130}
+            height={41}
+            gradient={Gradient.GHOST_BUTTON_GRADIENT}
+            contentType={`text`}
+            text={`Load demo`}
+            fontSize={13}
+            fontColor={Color.GHOST_BUTTON_TEXT}
+          />
+        </ButtonList>
+        <User />
+      </Header>
+      <Main />
+    </>
   );
 };
 

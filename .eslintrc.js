@@ -99,6 +99,7 @@ module.exports = {
     'react/jsx-filename-extension': ['off'],
     'react/jsx-indent': ['off'],
     'react/jsx-indent-props': [2, 2],
+    'react/jsx-max-depth': ['off'],
     'react/jsx-max-props-per-line': [2, {
       maximum: 2,
       when: 'always'
