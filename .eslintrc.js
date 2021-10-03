@@ -95,7 +95,7 @@ module.exports = {
     }],
     'react/jsx-curly-brace-presence': [2, {
       props: 'always',
-      children: 'always'
+      children: 'never'
     }],
     'react/jsx-filename-extension': ['off'],
     'react/jsx-indent': ['off'],
@@ -109,6 +109,7 @@ module.exports = {
       prevent: true
     }],
     'react/jsx-no-bind': ['off'],
+    'react/jsx-no-literals': ['off'],
     'react/jsx-one-expression-per-line': [2, {
       allow: 'single-child'
     }],
