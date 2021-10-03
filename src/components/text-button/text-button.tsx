@@ -18,7 +18,7 @@ const ButtonText = styled.span`
 
 type TextButtonProps = TextButtonExtraProps & ButtonMainProps;
 
-const TextButton: React.FC<TextButtonProps> = ({ width, height, withBorder, onClick, text, fontSize, fontColor, color, gradient }) => {
+const TextButton: React.FC<TextButtonProps> = ({ width, height, withBorder, onClick, children, fontSize, fontColor, color, gradient }) => {
 
   return (
     <StyledButton
@@ -34,7 +34,7 @@ const TextButton: React.FC<TextButtonProps> = ({ width, height, withBorder, onCl
         fontColor={fontColor}
         fontSize={fontSize}
       >
-        {text}
+        {children}
       </ButtonText>
     </StyledButton>
   );

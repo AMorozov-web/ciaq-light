@@ -20,10 +20,11 @@ const App: React.FC = () => {
           width={130}
           height={41}
           gradient={Gradient.CTA_BUTTON_GRADIENT}
-          text={`Upload file`}
           fontSize={13}
           fontColor={Color.BASIC_WHITE}
-        />
+        >
+          Upload file
+        </TextButton>
         <IconButton
           width={130}
           height={41}
