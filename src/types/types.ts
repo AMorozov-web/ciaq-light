@@ -1,15 +1,17 @@
-type TextButtonExtraProps = {
-  text?: string;
+import type React from "react";
+
+export type TextButtonExtraProps = {
+  children?: React.ReactNode;
   fontSize: number;
   fontColor: string;
 };
 
-type IconButtonExtraProps = {
+export type IconButtonExtraProps = {
   iconWidth: number;
   iconHeight: number;
 };
 
-type ButtonMainProps = {
+export type ButtonMainProps = {
   width: number;
   height: number;
   color?: string;
@@ -17,10 +19,4 @@ type ButtonMainProps = {
   withBorder?: boolean;
   onClick?: ()=> void;
   iconSrc?: string;
-};
-
-export {
-  IconButtonExtraProps,
-  TextButtonExtraProps,
-  ButtonMainProps,
 };
